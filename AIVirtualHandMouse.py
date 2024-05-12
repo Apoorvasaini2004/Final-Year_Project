@@ -5,12 +5,14 @@ import tkinter as tk
 import math
 
 # Function to map hand landmarks to screen coordinates
+
 def map_landmarks_to_screen_coords(landmark, screen_width, screen_height):
     x = int(landmark.x * screen_width)
     y = int(landmark.y * screen_height)
     return x, y
 
 # Function to calculate distance between two points
+
 def calculate_distance(point1, point2):
     return math.sqrt((point2[0] - point1[0])*2 + (point2[1] - point1[1])*2)
 cap = cv2.VideoCapture(0)
